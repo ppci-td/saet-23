@@ -1,0 +1,67 @@
+Enquanto preparava suas anotações para levar para a Maratona de Programação,
+Douglas percebeu um fato interessante: algumas estruturas de dados fazem tudo o
+que outras estruturas fazem e mais um pouco, e logo poderiam substitui-las sem
+prejuizo. É o caso, por exemplo, da BIT (\textit{Binary Indexed Tree}) e da Seg
+(\textit{Segment Tree}). A Seg tem todas as funcionalidades que a BIT tem (além
+        das funcionalidades que só a Seg possui). Por isso, conhecer a
+BIT não é \textit{realmente} necessário quando se já conhece a Seg\footnote{embora é recomendado, pois o
+código da BIT é mais compacto que o da Seg, tornando-a mais prática.}, pois todo problema que pode
+ser resolvido com a BIT pode ser resolvido com a Seg em seu lugar. Neste caso,
+    dizemos que a Seg \textit{pode substituir} a BIT.
+
+Após estudar todas as $N$ estruturas de dados que existem, Douglas descobriu quais
+estruturas podem substituir quais outras. Agora Douglas está curioso: qual é a estrutura
+de dados que pode substituir (direta ou indiretamente) a maior quantidade de outras estruturas?
+
+\subsection*{Entrada}
+
+A primeira linha contém dois inteiros $N$ e $M$
+($1 \leq N \leq 2000, 0 \leq M \leq min(\frac{N^2 - N}{2}, 2000$)), o número de estruturas e de substituições,
+respectivamente. As estruturas são numeradas de $1$ a $N$.
+As próximas $M$ linhas contém dois inteiros $A$ e $B$ cada
+$(1 \leq A, B \leq N, A \neq B)$, indicando que a estrutura $A$ pode substituir a
+estrutura $B$.
+
+É garantido que a relação de substituições não contém ciclos.
+
+\subsection*{Saída}
+
+Imprima uma linha com dois inteiros $E$ e $S$, onde $E$ é a estrutura de dados
+que pode substituir (direta ou indiretamente) a maior quantidade de outras estruturas, enquanto $S$ é a quantidade
+de outras estruturas que $E$ pode substituir (direta ou indiretamente).
+
+Se houver mais de uma estrutura que pode substituir a maior quantidade de estruturas,
+imprima a de menor número identificador.
+
+\vspace{-0.3cm}
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+8 9
+1 2
+2 5
+2 6
+5 6
+3 2
+7 6
+3 7
+4 3
+8 7
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+4 5
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}

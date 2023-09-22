@@ -1,0 +1,125 @@
+A rainha morreu.
+
+Por ela ter sido uma pessoa muito relevante para a história de seu país, o funeral
+da rainha será aberto ao público e televisionado ao vivo para toda a nação.
+Uma procissão aberta acontecerá durante o funeral, levando o caixão com o corpo
+da monarca. A procissão sairá da Igreja Imperial (onde o corpo será velado) e
+irá, em linha reta, até o Cemitério Real (onde o corpo será enterrado).
+
+Preocupada com a segurança do evento, a organização da procissão decidiu que a
+mesma não andará em velocidade constante durante todo o trajeto. Assim,
+a organização demarcou $N$ pontos no trajeto, sendo o primeiro a $x_1$ metros da
+Igreja; o segundo a $x_2$ metros da Igreja; etc., até o último ponto, a $x_N$
+metros da Igreja, onde fica o Cemitério.
+
+\begin{center}
+    \includegraphics[scale=0.8]{funeral/funeral.png}
+\end{center}
+
+Então, a
+procissão sairá da Igreja, com velocidade inicial 0 (zero) e aceleração constante
+$a_0$ m/s$^2$, até o ponto $x_1$. Neste ponto,
+a aceleração é alterada para $a_1$ m/s$^2$, com a qual a procissão vai
+até o ponto $x_2$. Neste ponto, a aceleração é alterada para $a_2$ m/s$^2$ e a
+procissão segue até o ponto $x_3$; e assim por diante, até que a procissão chegue
+ao Cemitério.
+
+Para ajudar a organização com o restante do funeral, sua tarefa é determinar em
+que horário a procissão chegará no Cemitério Real.
+
+
+\subsection*{Entrada}
+
+A primeira linha contém dois inteiros $N$ e $a_0$ ($1 \leq N \leq 10^4$, $0 <
+        a_0 \leq 100$).
+As próximas $N-1$ linhas contém, cada uma, os inteiros $x_i$ e $a_i$
+($0 < x_i \leq 10^9$, $-100 \leq a_i \leq 100$).
+A última linha contém o inteiro $x_N$ ($0 < x_N \leq 10^9$).
+
+Os valores de $x_i$ são dados em ordem estritamente crescente, iniciando por $x_1$.
+É garantido que a velocidade da procissão é sempre positiva durante todo o
+trajeto (inclusive em todos os trechos em que a aceleração é negativa), e que é igual a zero apenas no ponto inicial (na Igreja).
+
+\subsection*{Saída}
+
+Imprima uma linha com um valor $T$, indicando que a procissão chegará no
+Cemitério Real $T$ segundos após a saída da Igreja Imperial. Arredonde e imprima a resposta
+com duas casas decimais.
+
+\newpage
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+1 3
+100
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+8.16
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+2 3
+50 5
+100
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+7.97
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+5 10
+60 5
+120 -5
+180 0
+200 -6
+295
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+11.64
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}

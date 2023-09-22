@@ -1,0 +1,107 @@
+Este ano temos eleições gerais para escolher o novo chefe de governo da Nlogonia.
+
+Cada um dos $N$ eleitores do país tem três opções de como
+votar no dia da eleição: votar em um dos $M$
+candidatos que estão concorrendo ao cargo; votar em branco; ou anular seu
+voto.
+
+Um \textit{voto válido} é um voto dado em algum dos $M$ candidatos (isto é, um voto
+que não é nem em branco nem nulo). Se algum candidato receber mais que $50\%$
+de todos os votos válidos, ele vence a eleição. Caso contrário,
+os dois candidatos que mais receberem votos válidos irão disputar uma nova
+eleição, em segundo turno.
+
+Chegou a hora de totalizar os votos! Dados os votos registrados nas urnas, algum
+candidato venceu a eleição? Ou haverá segundo turno?
+
+\subsection*{Entrada}
+
+A primeira linha contém dois inteiros $N$ e $M$
+($1 \leq N, M \leq 10^5$), o número de eleitores e de candidatos,
+respectivamente. Os candidatos são numerados de $1$ a $M$.
+A próxima linha contém $N$ votos. Cada voto pode ser um número de um cadidato, a
+letra \verb|B| (voto em branco) ou a letra \verb|N| (voto nulo).
+
+É garantido que a entrada contém no mínimo 1 voto válido, e que, se houver
+segundo turno, não haverá empate nem na primeira nem na segunda colocação.
+
+\subsection*{Saída}
+
+Se não houver segundo turno, imprima uma linha contendo
+\verb|vencedor |$C$, sendo $C$ o número do candidato vencedor. Caso contrário,
+    imprima uma linha contendo \verb|segundo turno entre |$A$\verb| e |$B$, onde
+    $A$ e $B$ são os números do candidato mais votado e o segundo mais votado,
+    respectivamente.
+
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+7 100
+92 92 B 7 92 7 N
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+vencedor 92
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+11 100
+B 95 N 95 95 99 99 B 95 98 99
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+segundo turno entre 95 e 99
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+10 10
+9 B 5 N 5 9 B 5 9 5
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+vencedor 5
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}

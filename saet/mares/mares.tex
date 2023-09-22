@@ -1,0 +1,60 @@
+\vspace{-0.5cm}
+Sempre que o prof. Racirdinho fala sobre números pares e números ímpares durante
+as aulas de Teoria da Poncutação, uma dúvida geral surge: ``o número 0 (zero) é
+par?''.
+
+Embora o professor insista que zero seja sim um número par, Mariazinha ainda está
+desconfiada desta informação, e prefere não tomar isso como verdade. Para não
+gerar conflitos, Mariazinha decidiu criar sua própria definição de números pares.
+
+Um número é \textit{mar} (abreviação para ``Mariazinha-par'') se é positivo, é
+múltiplo de dois, e não contém nenhum 0 (zero) em sua representação decimal.
+Como exemplo, os números 2, 42, e 796 são mares, enquanto 0, 20, 402 e 7096 não são
+mares.
+
+Os primeiros números mares são, nesta ordem, 2, 4, 6, 8, 12, 14, 16, 18, 22, 24, etc.
+Sua tarefa é, para várias consultas, determinar, dado um inteiro $N$, qual é o $N-$ésimo número mar.
+
+\subsection*{Entrada}
+
+A primeira linha contém um inteiro $Q$ ($1 \leq Q \leq 100$), o número de
+consultas. As próximas $Q$ linhas descrevem uma consulta cada.
+Cada linha contém um inteiro $N$ ($1 \leq N \leq 10^{15}$).
+
+\subsection*{Saída}
+
+Para cada consulta, imprima uma linha contendo o $N-$ésimo número mar.
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+6
+1
+2
+10
+100
+38
+1000
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+2
+4
+24
+268
+94
+2968
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}

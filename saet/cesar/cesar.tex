@@ -1,0 +1,98 @@
+Muito antes de Alan Turing (1912--1954)\footnote{Obrigado Alan Turing, ateu,
+homossexual e pai da Computação} decifrar o esquema de criptografia usado
+pelos alemães na segunda guerra mundial, Júlio César já havia criado seu próprio
+algoritmo de criptografia para uso militar durante a República Romana.
+
+Dado um inteiro $K$, a Cifra de César criptografa uma mensagem substituindo cada
+letra da mensagem pela letra que aparece $K$ posições a sua frente na ordem
+alfabética (ciclicamente). Por exemplo, se $K=2$, todo \verb|A| é substituído por
+\verb|C|;
+todo \verb|B| é substituído por \verb|D|; ...; todo \verb|X| é substituído por
+\verb|Z|; todo \verb|Y| é
+substituído por \verb|A|; e todo \verb|Z| é substituído por \verb|B|. Desta forma, se $K=2$, a
+mensagem \verb|ATAQUE|, por exemplo, é criptografada em \verb|CVCSWG|.
+
+Você é um soldado espião inimigo da República, e sua tarefa é descriptografar
+mensagens criptografadas pela Cifra de César.
+
+\subsection*{Entrada}
+
+A primeira linha contém o valor de $K$ utilizado na criptografia $(0 \leq K <
+        26$). A segunda linha contém a mensagem criptografada. A mensagem contém
+de 1 até 1000 letras maiúsculas.
+
+\subsection*{Saída}
+
+Imprima uma única linha contendo a mensagem descriptografada.
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+2
+CVCSWG
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+ATAQUE
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+13
+OBENOVYY
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+BORABILL
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+20
+BYFFIQILFX
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+HELLOWORLD
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}

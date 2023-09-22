@@ -1,0 +1,232 @@
+\documentclass[12pt,oneside]{article} % Uma Coluna e lingua portuguesa
+%\usepackage[T1]{fontenc}        % Permite digitar os acentos de forma normal
+\usepackage[utf8]{inputenc}
+%\usepackage[english]{babel}
+\usepackage[portuges,brazil]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[dvips]{graphicx}    % Permite Gráficos
+%\usepackage{times}    % Fonte Times
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{nomencl}    % glossario
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[compact]{titlesec}
+\usepackage{wrapfig}
+
+%=======================================================================
+
+% Hifenização das palavras desconhecidas pelo LaTeX
+%\hyphenation{}
+\paperheight    297mm
+\paperwidth     210mm
+\voffset         -15mm
+\headheight      15pt %% tamanho de letra
+\headsep         5mm  %% para o início do texto
+\oddsidemargin  -3.0mm
+\evensidemargin -3.0mm
+\textwidth      167.0mm
+\topmargin      005.0mm
+\textheight     240.0mm
+\footskip       10.0mm
+
+\title{SAET 2022 - Maratona de Programação}
+
+\author{Maratona de Programação}
+\date{20 de Outubro de 2022}
+\usepackage{indentfirst}
+\usepackage{subfig}
+
+\parindent=0pt
+\setlength{\parskip}{7pt plus 1pt minus 2pt}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+\begin{document}
+
+\begin{center}
+\textbf{\Huge SAET 2022 - Maratona de Programação} \\
+\vspace{0.2cm}
+\textit{20 de Outubro de 2022} \\
+\vspace{1.0cm}
+%\textbf{Sevidor BOCA:} \\
+%\texttt{\large http://maratona.c3sl.ufpr.br/boca/} \\
+%\vspace{1.0cm}
+\begin{figure}[h!]
+	\centering
+ \includegraphics[scale=0.95]{capa.png}
+\end{figure}
+\vspace{1.0cm}
+%\textbf{Organizadores:}\\
+%{\small Flávio Zavan} \\
+%{\small Ricardo Oliveira} \\
+\vspace{1.0cm}
+\end{center}
+
+\clearpage
+
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{0.7pt}
+\renewcommand{\headrulewidth}{0.7pt}
+\lhead{SAET 2022 - Maratona de Programação}
+%\chead{Maratonas de Programação}
+\rhead{20 de Outubro de 2022}
+\cfoot{\thepage}
+
+\newpage
+
+% Espaco para o create-zips.sh nao achar
+  \section*{Instruções Importantes}
+
+\begin{itemize}
+
+    \item Use a opção \textbf{Runs} para enviar suas soluções. Os problemas podem resolvidos em qualquer ordem e
+    linguagem (dentre C, C++ e Python, independentemente do problema);
+
+    \item Suas soluções serão testadas com várias entradas,
+    além das dada como exemplo. Por isso, sua solução pode não ser
+    aceita mesmo se funcionar para os exemplos dados. Certifique-se que ela
+    funciona para todas as entradas possíveis;
+
+    \item A saída gerada deve ser \textit{exatamente} conforme
+    especificada. Em particular, \textbf{não} imprima instruções (``digite um
+            número'', ``a resposta é'', etc);
+
+    \item É garantido que todas as entradas usadas para teste estarão de acordo
+    com o enunciado, não sendo necessário testar se são válidas;
+
+    \item Ao enviar uma solução, o sistema irá responder uma das
+    seguintes respostas:
+    \begin{itemize}
+        \item \verb|Not answered yet|: a solução está sendo corrigida.
+        Aguarde um pouco e atualize a página;
+        \item \verb|YES|: solução aceita. Parabéns!
+        \item \verb|Wrong Answer|: a saída impressa pelo seu programa não é a
+        saída correta esperada, para alguma entrada de teste;
+        \item \verb|Presentation Error|: a saída impressa está correta, exceto
+        por espaços em branco e/ou quebras-de-linha faltando/sobrando;
+        \item \verb|Time Limit Exceeded|: o tempo de execução do seu programa
+        ultrapassou o tempo limite estipulado para o problema (ver tabela
+        abaixo). O tempo de execução da sua solução precisa ser menor;
+        \item \verb|Runtime Error|: seu programa gerou algum erro em tempo de
+        execução (``crashou'');
+        \item \verb|Compile Error|: seu programa não compila.
+    \end{itemize}
+
+%    \item Sua solução será compilada com a seguinte linha de comando:
+%    \begin{itemize}
+%        \item C: \verb|gcc -static -O2 -lm|
+%        \item C++: \verb|g++ -static -O2 -lm|
+%        \item C++11: \verb|g++ -std=c++11 -static -O2 -lm|
+%        \item Java: \verb|javac|
+%        \item Pascal: \verb|fpc -Xt -XS -O2|
+%    \end{itemize}
+
+    \item Todas as linhas, tanto na entrada quanto na saída, terminam com o
+    caractere de fim-de-linha ($\backslash n$), mesmo quando houver apenas uma única
+    linha na entrada e/ou saída;
+
+    \item Sua solução deve processar cada arquivo de entrada no tempo máximo
+    estipulado para cada problema, dado pela seguinte tabela:
+
+    \begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c||c|}
+    \hline
+    \textbf{Problema} & \textbf{Nome} & \textbf{Tempo Limite (segundos)} \\
+    \hline
+    A & Funeral da Rainha & 1 \\
+    \hline
+    B & Herdeiros da Rainha & 1 \\
+    \hline
+    C & Rage Against the JVM & 4 \\
+    \hline
+    D & Quem não tem BIT caça com Seg & 1 \\
+    \hline
+    E & Logomarca & 1 \\
+    \hline
+    F & Resultado da Eleição & 1 \\
+    \hline
+    G & Álbum da Copa & 1 \\
+    \hline
+    H & Números Jares & 1 \\
+    \hline
+    I & Números Mares & 1 \\
+    \hline
+    J & Pesos na Barra & 1 \\
+    \hline
+    \end{tabular}
+    \end{table}
+
+ %   \item Os juizes usam um sistema de 64 bits (idêntico às maquinas do DINF).
+
+%    \item Para submissões em \textbf{JAVA}, a classe deverá ter o mesmo nome que
+%    o \textit{basename} do problema (leia a linha entre o título e o texto do
+%    problema).
+
+\end{itemize}
+
+\newpage
+\section*{A: Funeral da Rainha} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: funeral.[c|cpp|py]\end{verbatim}
+\input{funeral/funeral.tex}
+
+\newpage
+\section*{B: Herdeiros da Rainha} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: herdeiros.[c|cpp|py]\end{verbatim}
+\input{herdeiros/herdeiros.tex}
+
+\newpage
+\section*{C: Rage Against the JVM} %tle=4
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: rage.[c|cpp|py]\end{verbatim}
+\input{rage/rage.tex}
+
+\newpage
+\section*{D: Quem não tem BIT caça com Seg} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: bit.[c|cpp|py]\end{verbatim}
+\input{bit/bit.tex}
+
+\newpage
+\section*{E: Logomarca} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: logomarca.[c|cpp|py]\end{verbatim}
+\input{logomarca/logomarca.tex}
+
+\newpage
+\section*{F: Resultado da Eleição} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: resultado.[c|cpp|py]\end{verbatim}
+\input{resultado/resultado.tex}
+
+\newpage
+\section*{G: Álbum da Copa} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: album.[c|cpp|py]\end{verbatim}
+\input{album/album.tex}
+
+\newpage
+\section*{H: Números Jares} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: jares.[c|cpp|py]\end{verbatim}
+\input{jares/jares.tex}
+
+\newpage
+\section*{I: Números Mares} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: mares.[c|cpp|py]\end{verbatim}
+\input{mares/mares.tex}
+
+\newpage
+\section*{J: Pesos na Barra} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: pesos.[c|cpp|py]\end{verbatim}
+\input{pesos/pesos.tex}
+
+\end{document}
