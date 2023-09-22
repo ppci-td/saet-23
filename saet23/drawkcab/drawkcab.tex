@@ -1,0 +1,144 @@
+Uma das mais divertidas tarefas de um maratonista de programação é a escolha do
+nome da sua equipe. Depois de muito debate, sua equipe decidiu escolher o nome
+da seguinte maneira:
+
+\begin{itemize}
+    \item O nome deverá ser uma substring não vazia de uma dada string $s$;
+    \item O nome deverá ser palíndrome (isto é, deve ser igual quando lido da
+            esquerda para a direita e da direita para a esquerda);
+    \item Cada letra do alfabeto $a$, $b$, $c$, ..., $z$ tem um \textit{valor}
+    $V_a$, $V_b$, $V_c$, ..., $V_z$. O \textit{valor total} do nome escolhido é a soma dos valores de
+    suas letras. O nome escolhido deverá ter o maior valor total possível.
+\end{itemize}
+
+Como exemplo, considere a string $s = $ \verb|xabaydcbbcdyz| e os valores
+$V_a = 20$, $V_b = -10$, $V_c = 15$, $V_d = 11$, $V_x = 20$, $V_y = -20$ e $V_z
+= 20$. Alguns nomes que poderiam ser escolhidos são:
+
+\begin{itemize}
+    \item \verb|aba|, com valor total $V_a + V_b + V_a = 20-10+20 = 30$;
+    \item \verb|dcbbcd|, com valor total $11 + 15 - 10 - 10 + 15 + 11 = 32$;
+    \item \verb|ydcbbcdy|, com valor total $-20 + 11 + 15 - 10 - 10 + 15 + 11
+    -20 = -8$;
+    \item Outras substrings palíndromes de $s$.
+\end{itemize}
+
+Neste exemplo, a substring palíndrome \verb|dcbbcd| tem o maior valor total
+possível (32), e portanto este será o nome da equipe.
+
+Dada a string $s$ e os valores de cada letra, ajude a escolher o nome da sua
+equipe!
+
+\subsection*{Entrada}
+
+A primeira linha contém 26 valores inteiros $V_a, V_b, V_c, ..., V_z$ (entre
+        $-1000$ e $1000$ cada) indicando o
+valor de cada letra do alfabeto.
+
+A segunda linha contém a string $s$ ($1 \leq |s| \leq 5 \times 10^5$), contendo
+apenas letras minúsculas.
+
+\subsection*{Saída}
+
+Imprima uma única linha contendo o valor total do nome escolhido pela equipe.
+
+\newpage
+\begin{table}[!h]
+\centering
+\hspace{-2cm}
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{5.5in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+20 -10 15 11 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 20 0 -20 20
+xabaydcbbcdyz
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{1.5in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+32
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\hspace{-2cm}
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{5.5in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+1 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+bbbaaaaaabbbbbbaaa
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{1.5in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+6
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\hspace{-2cm}
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{5.5in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+7 1 1 8 1 -5 1 1 3 1 -10 1 71 -42 1 1 1 1 1 1 1 1 1 1 1 1
+lazafakeekafdrawkcabackwardlaza
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{1.5in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+31
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\hspace{-2cm}
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{5.5in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+-1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{1.5in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+-1
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
