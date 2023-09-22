@@ -1,0 +1,145 @@
+\documentclass[12pt,oneside]{article} % Uma Coluna e lingua portuguesa
+%\usepackage[T1]{fontenc}        % Permite digitar os acentos de forma normal
+\usepackage[utf8]{inputenc}
+%\usepackage[english]{babel}
+\usepackage[portuges,brazil]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[dvips]{graphicx}    % Permite Gráficos
+%\usepackage{times}    % Fonte Times
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{nomencl}    % glossario
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[compact]{titlesec}
+\usepackage{wrapfig}
+
+%=======================================================================
+
+% Hifenização das palavras desconhecidas pelo LaTeX
+%\hyphenation{}
+\paperheight    297mm
+\paperwidth     210mm
+\voffset         -15mm
+\headheight      15pt %% tamanho de letra
+\headsep         5mm  %% para o início do texto
+\oddsidemargin  -3.0mm
+\evensidemargin -3.0mm
+\textwidth      167.0mm
+\topmargin      005.0mm
+\textheight     240.0mm
+\footskip       10.0mm
+
+\title{SAET 2023 - Maratona de Programação}
+
+\author{Maratona de Programação}
+\date{26 de Outubro de 2022}
+\usepackage{indentfirst}
+\usepackage{subfig}
+
+\parindent=0pt
+\setlength{\parskip}{7pt plus 1pt minus 2pt}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+\begin{document}
+
+\begin{center}
+\textbf{\Huge SAET 2023 - Maratona de Programação} \\
+\vspace{0.2cm}
+\textit{26 de Outubro de 2022} \\
+\vspace{1.0cm}
+%\textbf{Sevidor BOCA:} \\
+%\texttt{\large http://maratona.c3sl.ufpr.br/boca/} \\
+%\vspace{1.0cm}
+\begin{figure}[h!]
+	\centering
+ \includegraphics[scale=0.95]{capa.png}
+\end{figure}
+\vspace{1.0cm}
+%\textbf{Organizadores:}\\
+%{\small Flávio Zavan} \\
+%{\small Ricardo Oliveira} \\
+\vspace{1.0cm}
+\end{center}
+
+\clearpage
+
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{0.7pt}
+\renewcommand{\headrulewidth}{0.7pt}
+\lhead{SAET 2023 - Maratona de Programação}
+%\chead{Maratonas de Programação}
+\rhead{26 de Outubro de 2023}
+\cfoot{\thepage}
+
+\newpage
+
+% Espaco para o create-zips.sh nao achar
+  \section*{Instruções Importantes}
+
+\begin{itemize}
+
+    \item Use a opção \textbf{Runs} para enviar suas soluções. Os problemas podem resolvidos em qualquer ordem e
+    linguagem (dentre C, C++ e Python, independentemente do problema);
+
+    \item Suas soluções serão testadas com várias entradas,
+    além das dada como exemplo. Por isso, sua solução pode não ser
+    aceita mesmo se funcionar para os exemplos dados. Certifique-se que ela
+    funciona para todas as entradas possíveis;
+
+    \item A saída gerada deve ser \textit{exatamente} conforme
+    especificada. Em particular, \textbf{não} imprima instruções (``digite um
+            número'', ``a resposta é'', etc);
+
+    \item É garantido que todas as entradas usadas para teste estarão de acordo
+    com o enunciado, não sendo necessário testar se são válidas;
+
+    \item Ao enviar uma solução, o sistema irá responder uma das
+    seguintes respostas:
+    \begin{itemize}
+        \item \verb|Not answered yet|: a solução está sendo corrigida.
+        Aguarde um pouco e atualize a página;
+        \item \verb|YES|: solução aceita. Parabéns!
+        \item \verb|Wrong Answer|: a saída impressa pelo seu programa não é a
+        saída correta esperada, para alguma entrada de teste;
+        \item \verb|Presentation Error|: a saída impressa está correta, exceto
+        por espaços em branco e/ou quebras-de-linha faltando/sobrando;
+        \item \verb|Time Limit Exceeded|: o tempo de execução do seu programa
+        ultrapassou o tempo limite estipulado para o problema (ver tabela
+        abaixo). O tempo de execução da sua solução precisa ser menor;
+        \item \verb|Runtime Error|: seu programa gerou algum erro em tempo de
+        execução (``crashou'');
+        \item \verb|Compile Error|: seu programa não compila.
+    \end{itemize}
+
+    \item Todas as linhas, tanto na entrada quanto na saída, terminam com o
+    caractere de fim-de-linha ($\backslash n$), mesmo quando houver apenas uma única
+    linha na entrada e/ou saída;
+
+    \item Sua solução deve processar cada arquivo de entrada no tempo máximo
+    estipulado para cada problema, dado pela seguinte tabela:
+
+    \begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c||c|}
+    \hline
+    \textbf{Problema} & \textbf{Nome} & \textbf{Tempo Limite (segundos)} \\
+    \hline
+    D & Drawkcabackward & 1 \\
+    \hline
+    \end{tabular}
+    \end{table}
+
+\end{itemize}
+
+\newpage
+\section*{D: Drawkcabackward } %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: drawkcab.[c|cpp|py]\end{verbatim}
+\input{drawkcab/drawkcab.tex}
+
+\end{document}
