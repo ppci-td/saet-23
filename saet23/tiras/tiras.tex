@@ -1,0 +1,81 @@
+Sila trabalha em um pequeno ateliê próprio onde são produzidas camisetas e uniformes. Depois de uma semana cheia de pedidos para entrega, a maior cooperativa da cidade, SAET (Sociedade de Agropecuária e Empreendedorismo de Tumingapurubá), pediu para que ela produzisse bodies para bebês, pois o departamento de Recursos Humanos da cooperativa queria dar um de presente para toda funcionária ou cooperada gestante que entrasse de licença maternidade. 
+
+Para confeccionar os bodies, existem $n$ caixas, cada uma com tiras de comprimento $c_i$. Sila pediu para que seu marido, Amário, cortasse essas tiras em tamanhos iguais, sem desperdiçar tecido. Para fazer isso, Amário criou o seguinte processo, realizado várias vezes:
+
+\begin{itemize}
+    \item Pegar duas caixas $i$ e $j$ com tiras de comprimentos diferentes $c_i$ e $c_j$, sendo que $c_i> c_j$;
+    \item Cortar as tiras de comprimento $c_i$ em duas partes, uma de tamanho $c_j$ e outra de tamanho $c_i-c_j$;
+    \item Colocar as tiras de comprimento $c_j$ dentro da caixa $j$, e as de comprimento $c_i-c_j$ dentro da caixa $i$.
+\end{itemize}
+
+É garantido que, ao realizar esse processo um número finito de vezes, todas as tiras terão o mesmo tamanho.
+
+Para ter uma noção de quanto irá demorar, Amário pediu para que você determinasse qual é o mínimo de vezes que o processo terá de ser realizado para que, ao final, todas as tiras tenham o mesmo tamanho.
+
+Por exemplo, se houverem $n=4$ caixas, cada uma com tiras de comprimento $c=[8,10,6,4]$, o processo pode ser realizado um mínimo de 4 vezes até que, ao final, todas as caixas tenham tiras de mesmo comprimento e o processo não possa mais ser realizado. Uma das formas de executar o mínimo de 4 vezes o processo é:
+
+\begin{center}
+    $[\textcolor{red}{8},\textcolor{red}{10},6,4] \rightarrow [\textcolor{red}{8},2,\textcolor{red}{6},4] \rightarrow [2,2,\textcolor{red}{6},\textcolor{red}{4}] \rightarrow [2,2,\textcolor{red}{2},\textcolor{red}{4}] \rightarrow [2,2,2,2]$
+\end{center}
+
+Em vermelho, estão o comprimento das tiras das duas caixas escolhidas para cada processo realizado.
+
+\subsection*{Entrada}
+ 
+A primeira linha da entrada contém o número de caixas $n$ ($2\leq n\leq 10^5$).
+ 
+A próxima linha consiste em $n$ inteiros $c_i$ ($1\leq c_i \leq 10^9$), o tamanho das tiras dentro da caixa $i$.
+ 
+\subsection*{Saída}
+A saída deverá conter uma linha com o número de processos realizados, atendendo ao pedido de Amário. 
+
+\newpage
+\begin{table}[!h]
+\centering
+\hspace{-2cm}
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{5.5in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+4
+8 10 6 4
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{1.5in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+4
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\hspace{-2cm}
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{5.5in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+3
+1 1 1000000000
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{1.5in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+999999999
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
