@@ -1,34 +1,33 @@
-Sila trabalha em um pequeno ateliê próprio onde são produzidas camisetas e uniformes. Depois de uma semana cheia de pedidos para entrega, a maior cooperativa da cidade, SAET (Sociedade de Agropecuária e Empreendedorismo de Tumingapurubá), pediu para que ela produzisse bodies para bebês, pois o departamento de Recursos Humanos da cooperativa queria dar um de presente para toda funcionária ou cooperada gestante que entrasse de licença maternidade. 
+Sila trabalha em um pequeno ateliê de costura próprio onde é confeccionado de tudo, desde camisetas e uniformes até o vestuário infantil. Depois de uma semana cheia de entregas, a maior cooperativa da cidade, SAET (Sociedade de Agropecuária e Empreendedorismo de Tumingapurubá), pediu para que ela produzisse bodies para bebês, pois o departamento de Recursos Humanos da cooperativa queria dar um de presente para toda funcionária ou cooperada gestante que entrasse de licença maternidade. 
 
-Para confeccionar os bodies, existem $n$ caixas, cada uma com tiras de comprimento $c_i$. Sila pediu para que seu marido, Amário, cortasse essas tiras em tamanhos iguais, sem desperdiçar tecido. Para fazer isso, Amário criou o seguinte processo, realizado várias vezes:
+Para confeccionar os bodies, existem $n$ caixas com tiras de comprimento $c_i$. Sila pediu para que seu marido, Amário, cortasse essas tiras em tamanhos iguais, sem deixar sobras e procurando deixar as tiras o mais compridas possível. Para fazer isso, Amário criou o seguinte processo para juntar duas caixas adjacentes:
 
 \begin{itemize}
-    \item Pegar duas caixas $i$ e $j$ com tiras de comprimentos diferentes $c_i$ e $c_j$, sendo que $c_i> c_j$;
-    \item Cortar as tiras de comprimento $c_i$ em duas partes, uma de tamanho $c_j$ e outra de tamanho $c_i-c_j$;
-    \item Colocar as tiras de comprimento $c_j$ dentro da caixa $j$, e as de comprimento $c_i-c_j$ dentro da caixa $i$.
+    \item Pegar duas caixas adjacentes $i$ e $i+1$ com tiras de comprimentos $c_i$ e $c_{i+1}$;
+    \item Cortar todas as tiras das duas caixas para que os pedaços fiquem com tamanho MDC$(c_i, c_{i+1})$, onde MDC é a operação Máximo Divisor Comum;
+    \item Substituir as duas caixas $i$ e $i+1$ por uma caixa com as tiras de tamanho MDC$(c_i, c_{i+1})$ recém cortadas.
 \end{itemize}
 
-É garantido que, ao realizar esse processo um número finito de vezes, todas as tiras terão o mesmo tamanho.
+Para ter uma noção de quanto Amário irá demorar, Sila mandou que você determinasse qual é o mínimo de vezes que o processo de junção terá de ser realizado para que, ao final, todas as tiras das caixas remanescentes tenham o mesmo tamanho. Note que a quantidade de tiras não importa, mas sim o tamanho delas em cada caixa.
 
-Para ter uma noção de quanto irá demorar, Amário pediu para que você determinasse qual é o mínimo de vezes que o processo terá de ser realizado para que, ao final, todas as tiras tenham o mesmo tamanho.
-
-Por exemplo, se houverem $n=4$ caixas, cada uma com tiras de comprimento $c=[8,10,6,4]$, o processo pode ser realizado um mínimo de 4 vezes até que, ao final, todas as caixas tenham tiras de mesmo comprimento e o processo não possa mais ser realizado. Uma das formas de executar o mínimo de 4 vezes o processo é:
+Por exemplo, se houverem $n=5$ caixas, cada uma com tiras de comprimento $c=[10,30,12,42,2]$, o processo pode ser realizado um mínimo de 3 vezes até que, ao final, todas as caixas tenham tiras de mesmo comprimento e o processo não possa mais ser realizado. Uma das formas de juntar as caixas 3 vezes, satisfazendo o pedido de Sila, é:
 
 \begin{center}
-    $[\textcolor{red}{8},\textcolor{red}{10},6,4] \rightarrow [\textcolor{red}{8},2,\textcolor{red}{6},4] \rightarrow [2,2,\textcolor{red}{6},\textcolor{red}{4}] \rightarrow [2,2,\textcolor{red}{2},\textcolor{red}{4}] \rightarrow [2,2,2,2]$
+    $[\textcolor{red}{10},\textcolor{red}{30},12,42,2] \rightarrow [10,\textcolor{red}{12},\textcolor{red}{42},2] \rightarrow [\textcolor{red}{10},\textcolor{red}{6},2] \rightarrow [2,2]$
 \end{center}
 
-Em vermelho, estão o comprimento das tiras das duas caixas escolhidas para cada processo realizado.
+Em vermelho, estão o comprimento das tiras das duas caixas escolhidas para realizar a junção.
 
 \subsection*{Entrada}
  
 A primeira linha da entrada contém o número de caixas $n$ ($2\leq n\leq 10^5$).
  
-A próxima linha consiste em $n$ inteiros $c_i$ ($1\leq c_i \leq 10^9$), o tamanho das tiras dentro da caixa $i$.
+A próxima linha consiste em $n$ inteiros $c_i$ ($1\leq c_i \leq 10^5$), o tamanho das tiras dentro da caixa $i$.
  
 \subsection*{Saída}
-A saída deverá conter uma linha com o número de processos realizados, atendendo ao pedido de Amário. 
+A saída deverá conter uma linha com o número de processos de junção realizados, atendendo à ordem de Sila.
 
+%----- Exemplo 1 -----%
 \newpage
 \begin{table}[!h]
 \centering
@@ -38,8 +37,34 @@ A saída deverá conter uma linha com o número de processos realizados, atenden
 \begin{minipage}[t]{5.5in}
 \textbf{Exemplo de entrada}
 \begin{verbatim}
-4
-8 10 6 4
+5
+10 30 12 42 2
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{1.5in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+3
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+%----- Exemplo 2 -----%
+\begin{table}[!h]
+\centering
+\hspace{-2cm}
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{5.5in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+5
+16 4 4 2 8
 \end{verbatim}
 \vspace{1mm}
 \end{minipage}
@@ -55,6 +80,7 @@ A saída deverá conter uma linha com o número de processos realizados, atenden
 \end{tabular}
 \end{table}
 
+%----- Exemplo 3 -----%
 \begin{table}[!h]
 \centering
 \hspace{-2cm}
@@ -64,7 +90,7 @@ A saída deverá conter uma linha com o número de processos realizados, atenden
 \textbf{Exemplo de entrada}
 \begin{verbatim}
 3
-1 1 1000000000
+1 1 100000
 \end{verbatim}
 \vspace{1mm}
 \end{minipage}
@@ -72,7 +98,7 @@ A saída deverá conter uma linha com o número de processos realizados, atenden
 \begin{minipage}[t]{1.5in}
 \textbf{Exemplo de saída}
 \begin{verbatim}
-999999999
+1
 \end{verbatim}
 \vspace{1mm}
 \end{minipage} \\
