@@ -1,3 +1,5 @@
+// O(N^3)
+
 #include <bits/stdc++.h>
 
 #define SIZE 500050
