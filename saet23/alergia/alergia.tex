@@ -1,0 +1,74 @@
+Alergia não é coisa só de humano não, a bicharada também sofre.
+
+Maya tem um cachorrinho parceiro e super animal chamado Thomy. Ele tem o costume de cantar de galo, mandando Maya lhe dar comida. Claro que tudo em "cachorrês", afinal, ele é um cachorro! Animal é quem não entende ele.
+
+Sempre forte como um touro, hoje Thomy amanheceu andando como uma barata tonta pela casa... deu zebra! Maya não poderia deixá-lo desamparado, pois não tem sangue de cobra e é uma mãe coruja com os seus bichinhos. Não titubeou: como uma lebre o levou para a veterinária.
+
+O doutor prescreveu uma nova ração, já que o Thomy havia desenvolvido alergia a alguns ingredientes. Ofereceram uma ração lá do Peru, que era o olho da cara... mais caro que um boi! Nem que a vaca tussa que Maya iria pagar tudo aquilo.
+
+Ela procurou outra veterinária, e lá eles prescreveram uma ração bem mais barata, uma pechincha. Tão barata que ela desconfiou, e pediu para você confirmar se algum dos ingredientes da ração poderia causar uma reação no cachorrinho. Mostre quem é o bicho da programação, criando um programa que compare os ingredientes presentes na ração e as alergias do Thomy!
+
+\subsection*{Entrada}
+A primeira linha tem apenas um inteiro $N$ ($1\leq N \leq 100$), o número de ingredientes.
+
+A segunda linha contém $N$ inteiros $R_i$ ($1\leq i \leq N$). Se $R_i=1$, então a ração contém o ingrediente $i$. Se $R_i=0$, então ela não contém o ingrediente $i$.
+
+A terceira linha contém $N$ inteiros $A_i$, indicando se Thomy tem alergia ao ingrediente $i$. Se $A_i=1$, então Thomy tem alergia ao ingrediente $i$. Se $A_i=0$, então ele não tem alergia ao ingrediente $i$.
+
+\subsection*{Saída}
+Imprima \texttt{"S"} (maiúsculo e sem aspas) se Maya pode dar a ração para o Thomy.
+
+Imprima \texttt{"N"} (maiúsculo e sem aspas) se Maya não deve dar a ração para o Thomy.
+
+%----- Exemplo 1 -----%
+\newpage
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+6
+1 0 0 1 1 0 
+0 0 1 0 0 1 
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+S
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+%----- Exemplo 2 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+4
+1 1 1 1
+0 1 0 0
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+N
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
