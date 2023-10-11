@@ -1,0 +1,118 @@
+A universidade Blupen está oferecendo uma gincana com várias brincadeiras 
+de premiações interessantes. Uma delas é a Meuzamigo e nosso amigo 
+Manoel Gomes está decidido a ganhar. A brincadeira consiste em
+em $N$ pessoas conectadas a $N-1$ fios. O participante é o primeiro a se conectar a rede,
+em seguida os ajudantes da gincana se conectam para dar vida a brincadeira. 
+
+Para vencer, é necessário que o participante 
+diga qual é a distância mais longa entre ele mesmo e um ajudante qualquer. 
+É garantido que todos as pessoas estejam conectadas na rede.
+
+\subsection*{Entrada}
+ 
+A primeira linha da entrada contém o número de pessoas $N$ ($2\leq n\leq 10^5$).
+ 
+As próximas $N-1$ linhas contém $A$ e $B$, as conexões entre cada particante.
+ 
+\subsection*{Saída}
+A saída deverá conter um número inteiro correspondente a distância mais longa
+entre Manoel Gomes e algum participante.
+
+%----- Exemplo 1 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+9
+1 9
+1 4
+9 5
+4 3
+5 6
+1 2
+1 7
+5 8
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+3
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+%----- Exemplo 2 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+2
+1 2
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+1
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+%----- Exemplo 3 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+19
+1 7
+7 12
+12 6
+1 14
+6 13
+13 17
+14 9
+12 2
+14 18
+1 10
+10 8
+13 11
+1 15
+13 16
+1 4
+6 5
+7 19
+2 3
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+5
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
