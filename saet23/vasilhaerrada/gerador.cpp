@@ -23,13 +23,14 @@ int main( )
 
     while(n--){
         do{
-            L1 = (double)rand()/100.0;
-            L2 = (double)rand()/100.0;
-            L3 = (double)rand()/100.0;
+            L1 = (double)(rand()%50000)/100.0;
+            L2 = (double)(rand()%50000)/100.0;
+            L3 = (double)(rand()%50000)/100.0;
         }
         while(!existe(L1, L2, L3));
 
-        cout << L1 <<" "<< L2 <<" "<< L3 << endl;
+        //cout << L1 <<" "<< L2 <<" "<< L3 << endl;
+        printf("%.2lf %.2lf %.2lf\n", L1, L2, L3);
 
         }
 
