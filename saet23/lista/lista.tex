@@ -1,0 +1,65 @@
+Pedro tem uma clínica que funciona 7 dias por semana, porém ele não gosta
+de trabalhar muito aos finais de semana, e por isso pediu para sua secretária
+distribuir os seus $N$ pacientes de acordo com a primeira letra de seus nomes em
+certos dias da semana.
+
+Ele atende as pessoas que têm os nomes que começam
+com as letras A,B,C e D no domingo; já na segunda-feira ele atende as pessoas que têm
+os nomes que começar com as letras E,F,G,e H; e assim por diante até
+a sexta-feira, quando só atende as pessoas com as letras U, V e W , e no sábado X,
+Y e Z .
+
+Entretanto, ele pediu para sua secretária que não organizasse os pacientes,
+    dentro de um mesmo dia, em ordem
+alfabética, pois assim seria injusto com os pacientes que marcaram suas consultas
+antes. Dentro de um mesmo dia, a lista de pacientes deve seguir a ordem em que
+marcaram as consultas.
+
+Assim, por exemplo, se Caio, Felipe, Diego,
+Ana, Bianca, Alice e Tiago marcaram consultas (nessa ordem),
+seriam atendidos no domingo, nessa ordem: Caio, Diego, Ana, Bianca e Alice;
+Já Felipe seria atendido na segunda-feira, portanto após todos esses; Tiago
+seria atendido por último.
+
+\subsection*{Entrada}
+
+A primeira linha contém $N$ ($1 \leq N \leq 1000$), o número de pacientes. As
+próximas $N$ linhas contém um nome cada, na ordem em que marcaram as consultas.
+Os nomes serão strings de até 20 letras minsculas e/ou maiusculas cada.
+
+\subsection*{Saída}
+
+Imprima um nome de paciente por linha, na ordem em que serão atendidos.
+
+%----- Exemplo 1 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+5
+bruna
+Gabi
+ana
+Caio
+bianca
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+bruna
+ana
+Caio
+bianca
+Gabi
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
