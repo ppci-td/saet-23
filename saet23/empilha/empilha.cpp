@@ -12,12 +12,12 @@ int main()
 {
     int numT =0;
     int copomax =0;
-    cin>>numT;
-    for(int i=0; i<numT;i++)
-    {
+//    cin>>numT;
+//    for(int i=0; i<numT;i++)
+//    {
         cin>>copomax;
         cout<<analize(copomax)<<endl;
-    }
-
+//    }
+    return 0;
 
 }
