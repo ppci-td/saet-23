@@ -1,0 +1,94 @@
+Gabriel fez aniversário semana retrasada, e tudo o que ele queria de presente era um fone de ouvido. Não tinha dúvidas sobre o que desejar no momento de apagar as velas do seu bolinho de aniversário. 
+
+A festa ia começar, quando a SAET (Serviço de Aplicação e Execução Tática), um dos departamentos da polícia federal, invadiu equivocadamente a sua casa, pensando que se tratava do domicílio de um dos criminosos mais procurados do país. Tudo ocorreu por causa do cabo Paradella, que confundiu o número 50 por 66 nas evidências. Este erro desencadeou uma série de eventos que culminaram em uma incursão à casa de Gabriel. Que gafe!
+
+Após perceberem o erro, a comandante do esquadrão deu de presente um dos fones de ouvidos táticos usados pela polícia como pedido de desculpas ao Gabriel. Apesar de super tecnológico, não tem um botão de desligar. Ao invés disso, tem três botões capazes de diminuir o nível do volume de formas muito inconvencionais:
+
+\begin{itemize}
+\item \textbf{Botão \texttt{E-}}: Diminui o nível do lado esquerdo em 1. Não faz nada se o nível já for 0;
+\item \textbf{Botão \texttt{D-}}: Diminui o nível do lado direito em 1. Não faz nada se o nível já for 0;
+\item \textbf{Botão S}: Subtrai o nível do lado mais alto pelo nível do lado mais baixo. Se os volumes forem iguais, um lado qualquer é subtraído do outro.
+\end{itemize}
+
+Para exemplificar, se o volume do fone estiver nos níveis [880, 980], o botão \texttt{E-} o fará mudará para os níveis [879, 980], o botão \texttt{D-} para [880, 979], e o botão \texttt{S} para [880, 100].
+
+Acontece que o nível de cada lado é \textit{independente} e vai até $1000$, e Gabriel não quer ficar apertando os botões milhares de vezes até desligar o fone. Dado os níveis do fone no momento, crie um programa que ajude Gabriel, dizendo a quantidade mínima de vezes que ele terá de apertar os botões para desligar completamente o seu novo fone de ouvido.
+
+\subsection*{Entrada}
+A entrada contém apenas uma linha com dois inteiros $E$ e $D$ ($0 \leq E, D \leq 1000$), o volume do lado esquerdo e direito do fone, respectivamente.
+
+\subsection*{Saída}
+Imprima uma única linha contendo a quantidade mínima de vezes que Gabriel terá de apertar os botões para desligar ambos lados do fone.
+
+%----- Exemplo 1 -----%
+\newpage
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+2 2
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+3
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+%----- Exemplo 2 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+11 15
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+8
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+%----- Exemplo 3 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+1000 976
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+48
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
