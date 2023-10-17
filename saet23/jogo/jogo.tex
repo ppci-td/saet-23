@@ -1,30 +1,41 @@
     Carlos e Pedro gostam muito de futebol e querem jogar uma partida um contra o outro. Como ambos são goleiros, eles precisam de jogadores no ataque e na defesa para completar o seu time.
 
     Para isso, eles têm uma lista de jogadores interessados em participar da partida, contendo os
-pontos de ataque e de defesa de todos. Quem tem seus pontos de defesa maior que os de ataque, joga na defesa,
-caso contrário, joga no ataque.
+pontos de ataque e de defesa de todos. Um jogador com pontos de defesa maior que
+os pontos de ataque é um defensor; um jogador com pontos de ataque maiores ou
+iguais aos de defesa é um atacante; o \textit{talento} de um jogador é dado pela
+soma de seus pontos de ataque com seus pontos de defesa.
 
-    Para a divisão ser justa, a escolha dos jogadores será feitas em rodadas. Carlos e Pedro escolherão um jogador por rodada.
-Na primeira rodada Carlos escolhe um jogador primeiro, na segunda Pedro escolhe primeiro e vão intercalando até acabarem os jogadores. Caso o número de jogadores
-seja ímpar, um não será escolhido.
 
-    A cada rodada a escolha é feita de forma bem simples:
+    Para a divisão ser justa, a escolha dos jogadores será feitas em rodadas. Em
+    cada rodada, Carlos e Pedro escolherão um jogador cada para seus times.
+Na primeira rodada Carlos escolhe um jogador primeiro; na segunda rodada Pedro
+escolhe um jogador primeiro; e assim por diante. Caso o número de jogadores
+seja ímpar, um deles não será escolhido.
+
+    A escolha de um jogador é feita pelos seguintes critérios:
 \begin{itemize}
-    \item Quem tiver a maior quantidade de pontos somados é escolhido;
-    \item Se alguém do ataque e da defesa tem a mesma quantidade de pontos, ambos têm preferência pelo atacante;
-    \item Caso tenha mais jogadores do ataque escolhidos, se possível, um jogador da defesa será escolhido;
-    \item Caso tenha mais jogadores da defesa escolhidos, se possível, um jogador do ataque será escolhido;
+    \item Se um time já tiver mais atacantes do que defensores, será escolhido para o time o defensor mais talentoso ainda não escolhido;
+    \item Se um time já tiver mais defensores do que atacantes, será escolhido
+    para o time o atacante mais talentoso ainda não escolhido;
+    \item Se um time tiver a mesma quantidade de atacantes e defensores, será
+    escolhido o jogador mais talentoso ainda não escolhido. Se houver mais de um
+    jogador ainda não escolhido com o maior talento, será escolhido um atacante.
 \end{itemize}
+
+Sua tarefa é determinar o talento médio do time mais talentoso.
 
 \subsection*{Entrada}
 
-A primeira linha da entrada contém o número de jogadores a serem escolhidos $N$ ($2\leq N\leq 10^5$).
-Cada uma das $N$ linhas seguintes contêm 2 inteiros: $K_i$ e $M_i$ ($0\leq K_i\leq 99, 0\leq M_i\leq 99$), sendo, respectivamente. os pontos de ataque
-e de defesa do jogador $i$.  
+A primeira linha da entrada contém o número $N$ de jogadores a serem escolhidos ($2\leq N\leq 10^5$).
+Cada uma das $N$ linhas seguintes contêm 2 inteiros: $K_i$ e $M_i$ ($0\leq
+        K_i\leq 99, 0\leq M_i\leq 99$), sendo, respectivamente, os pontos de ataque
+e de defesa do jogador $i$.
 
 \subsection*{Saída}
 
-A saída deverá conter uma linha com a média do time com a maior quantidade de pontos somados, com truncamento em duas casas decimais.
+A saída deverá conter uma linha com o talento médio do time mais talentoso, com
+exatamente duas casas decimais.
 
 %----- Exemplo 1 -----%
 \newpage
