@@ -1,0 +1,30 @@
+Seu melhor amigo, Gabriel, te pediu ajuda para criar a melhor estratégia para a raid que ele irá participar em LIT (Lost In Time), o jogo favorito dele. Ele te explicou como a raid funciona da seguinte forma:
+
+\begin{itemize}
+    \item Para causar dano nos mobs você deve usar magias.
+    \item Para cada magia usada você causa exatamente o dano dela no monstro e o monstro é eliminado quando ele tiver 0 HP.
+    \item Caso você cause mais dano do que o necessário para eliminar o monstro você recebe uma nova magia com o valor da diferença no dano.
+\end{itemize}
+
+Para se preparar para a raid ele deve comprar as magias usando as LIT'coins.
+\begin{itemize}
+    \item As magias disponivéis estão ordenadas linearmente na loja.
+    \item Cada magia custa exatamente seu valor em dano de LIT'coins.
+    \item É possível comprar multiplas magias somente em um único intervalo linear $[i; j]$ $i \leq j$
+    \item Para comprar multiplas magias você deve comprar todas as magias dentro do intervalo $[i; j]$ ($a_i, a_{i+1}, a_{i+2}, ..., a_j$).
+\end{itemize}
+
+O pedido de Gabriel é simples, ajude ele determinar qual a menor quantidade possível de LIT'coins para vencer a raid.
+
+\subsection*{Entrada}
+A primeira linha contém dois inteiro $N$ e $M$ ($1 \leq M \leq N \leq 10^5$).
+
+A segunda linha contém $N$ inteiros ($1 \leq a_i \leq 100$) que representam as magias disponíveis para a raid.
+
+A terceira linha contém $M$ inteiros ($1 \leq a_i \leq 100$) que representam o HP dos monstros da raid.
+
+%table entrada
+
+\subsection*{Saída}
+Imprima a quantidade mínima de LIT'coins para vencer a raid. Caso não seja possível completá-la imprima $-1$.
+%table saida
