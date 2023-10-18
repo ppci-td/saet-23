@@ -8,7 +8,7 @@ int main() {
     
     vector<int> magias(N);
     vector<int> monstros(M);
-    vector<int> somaMagias(N);
+    vector<int> somaMagias(N+1);
 
     for (int i = 0; i < N; i++) {
         cin >> magias[i];
@@ -21,12 +21,12 @@ int main() {
 
     int minCoins = INT_MAX;
 
-    somaMagias[0] = magias[0];
-    for (int i = 1; i < N; i++) {
+    somaMagias[0] = 0;
+    for (int i = 1; i < N+1; i++) {
         somaMagias[i] = somaMagias[i - 1] + magias[i];
     }
 
-    for (int i = 0; i < N; i++) {
+    for (int i = 1; i < N+1; i++) {
         for (int j = i; j < N; j++) {
             int sum = somaMagias[j] - somaMagias[i-1];
             if (sum >= sumRaid and minCoins > sum) {

@@ -1,17 +1,16 @@
 Seu melhor amigo, Gabriel, te pediu ajuda para criar a melhor estratégia para a raid que ele irá participar em LIT (Lost In Time), o jogo favorito dele. Ele te explicou como a raid funciona da seguinte forma:
 
 \begin{itemize}
-    \item Para causar dano nos mobs você deve usar magias.
+    \item Para causar dano nos monstros você deve usar magias.
     \item Para cada magia usada você causa exatamente o dano dela no monstro e o monstro é eliminado quando ele tiver 0 HP.
-    \item Caso você cause mais dano do que o necessário para eliminar o monstro você recebe uma nova magia com o valor da diferença no dano.
+    \item Caso o dano proporcionado pela magia exceda o HP atual do mostro, você recebe uma nova magia cujo dano é dado pela diferença entre o HP atual do mostro e o dano total da magia.
 \end{itemize}
 
 Para se preparar para a raid ele deve comprar as magias usando as LIT'coins.
 \begin{itemize}
-    \item As magias disponivéis estão ordenadas linearmente na loja.
+    \item As magias disponiveis estão dispostas linearmente na loja.
     \item Cada magia custa exatamente seu valor em dano de LIT'coins.
-    \item É possível comprar multiplas magias somente em um único intervalo linear $[i; j]$ $i \leq j$
-    \item Para comprar multiplas magias você deve comprar todas as magias dentro do intervalo $[i; j]$ ($a_i, a_{i+1}, a_{i+2}, ..., a_j$).
+    \item Você só pode comprar todas as magias dentro de um único intervalo $[i; j]$ ($a_i, a_{i+1}, a_{i+2}, ..., a_j$).
 \end{itemize}
 
 O pedido de Gabriel é simples, ajude ele determinar qual a menor quantidade possível de LIT'coins para vencer a raid.
@@ -21,85 +20,86 @@ A primeira linha contém dois inteiro $N$ e $M$ ($1 \leq M \leq N \leq 10^5$).
 
 A segunda linha contém $N$ inteiros ($1 \leq a_i \leq 100$) que representam as magias disponíveis para a raid.
 
-A terceira linha contém $M$ inteiros ($1 \leq a_i \leq 100$) que representam o HP dos monstros da raid.
+A terceira linha contém $M$ inteiros ($1 \leq b_i \leq 100$) que representam o HP dos monstros da raid.
 
 \subsection*{Saída}
 Imprima a quantidade mínima de LIT'coins para vencer a raid. Caso não seja possível completá-la imprima $-1$.
 
 %----- Exemplo 1 -----%
+\newpage
 \begin{table}[!h]
-    \centering
-    \begin{tabular}{|l|l|}
-    \hline
-    \begin{minipage}[t]{3in}
-    \textbf{Exemplo de entrada}
-    \begin{verbatim}
-    4 3
-    2 3 4 6
-    3 1 2 
-    \end{verbatim}
-    \vspace{1mm}
-    \end{minipage}
-    &
-    \begin{minipage}[t]{3in}
-    \textbf{Exemplo de saída}
-    \begin{verbatim}
-    6
-    \end{verbatim}
-    \vspace{1mm}
-    \end{minipage} \\
-    \hline
-    \end{tabular}
-    \end{table}
-    
-    %----- Exemplo 2 -----%
-    \begin{table}[!h]
-    \centering
-    \begin{tabular}{|l|l|}
-    \hline
-    \begin{minipage}[t]{3in}
-    \textbf{Exemplo de entrada}
-    \begin{verbatim}
-    4 2
-    3 1 2 6
-    5 1
-    \end{verbatim}
-    \vspace{1mm}
-    \end{minipage}
-    &
-    \begin{minipage}[t]{3in}
-    \textbf{Exemplo de saída}
-    \begin{verbatim}
-    6
-    \end{verbatim}
-    \vspace{1mm}
-    \end{minipage} \\
-    \hline
-    \end{tabular}
-    \end{table}
-    
-    %----- Exemplo 3 -----%
-    \begin{table}[!h]
-    \centering
-    \begin{tabular}{|l|l|}
-    \hline
-    \begin{minipage}[t]{3in}
-    \textbf{Exemplo de entrada}
-    \begin{verbatim}
-    4 4
-    2 3 3 4
-    5 2 1 8
-    \end{verbatim}
-    \vspace{1mm}
-    \end{minipage}
-    &
-    \begin{minipage}[t]{3in}
-    \textbf{Exemplo de saída}
-    \begin{verbatim}
-    -1
-    \end{verbatim}
-    \vspace{1mm}
-    \end{minipage} \\
-    \hline
-    \end{tabular}
-    \end{table}
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+4 3
+2 3 4 6
+3 1 2 
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+6
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+%----- Exemplo 2 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+4 2
+3 1 2 6
+5 1
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+6
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+%----- Exemplo 3 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+4 4
+2 3 3 4
+5 2 1 8
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+-1
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
