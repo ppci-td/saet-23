@@ -22,9 +22,8 @@ int main() {
 
     int minCoins = INT_MAX;
     
-    somaMagias[1] = 0;
-    somaMagias[1] = magias[0];
-    for (int i = 2; i <= N; i++) {
+    somaMagias[0] = 0;
+    for (int i = 1; i < N+1; i++) {
         somaMagias[i] = somaMagias[i - 1] + magias[i-1];
     }
 
@@ -34,7 +33,7 @@ int main() {
         
         while (lo <= hi) {
             int mid = (lo + hi) / 2;
-            int sum = somaMagias[mid] - somaMagias[i];
+            int sum = somaMagias[mid] - somaMagias[i-1];
             
             if (sum >= sumRaid) {
                 if(minCoins > sum)    minCoins = sum;
