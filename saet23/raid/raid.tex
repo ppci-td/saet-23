@@ -23,8 +23,83 @@ A segunda linha contém $N$ inteiros ($1 \leq a_i \leq 100$) que representam as 
 
 A terceira linha contém $M$ inteiros ($1 \leq a_i \leq 100$) que representam o HP dos monstros da raid.
 
-%table entrada
-
 \subsection*{Saída}
 Imprima a quantidade mínima de LIT'coins para vencer a raid. Caso não seja possível completá-la imprima $-1$.
-%table saida
+
+%----- Exemplo 1 -----%
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+    \begin{minipage}[t]{3in}
+    \textbf{Exemplo de entrada}
+    \begin{verbatim}
+    4 3
+    2 3 4 6
+    3 1 2 
+    \end{verbatim}
+    \vspace{1mm}
+    \end{minipage}
+    &
+    \begin{minipage}[t]{3in}
+    \textbf{Exemplo de saída}
+    \begin{verbatim}
+    6
+    \end{verbatim}
+    \vspace{1mm}
+    \end{minipage} \\
+    \hline
+    \end{tabular}
+    \end{table}
+    
+    %----- Exemplo 2 -----%
+    \begin{table}[!h]
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+    \begin{minipage}[t]{3in}
+    \textbf{Exemplo de entrada}
+    \begin{verbatim}
+    4 2
+    3 1 2 6
+    5 1
+    \end{verbatim}
+    \vspace{1mm}
+    \end{minipage}
+    &
+    \begin{minipage}[t]{3in}
+    \textbf{Exemplo de saída}
+    \begin{verbatim}
+    6
+    \end{verbatim}
+    \vspace{1mm}
+    \end{minipage} \\
+    \hline
+    \end{tabular}
+    \end{table}
+    
+    %----- Exemplo 3 -----%
+    \begin{table}[!h]
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+    \begin{minipage}[t]{3in}
+    \textbf{Exemplo de entrada}
+    \begin{verbatim}
+    4 4
+    2 3 3 4
+    5 2 1 8
+    \end{verbatim}
+    \vspace{1mm}
+    \end{minipage}
+    &
+    \begin{minipage}[t]{3in}
+    \textbf{Exemplo de saída}
+    \begin{verbatim}
+    -1
+    \end{verbatim}
+    \vspace{1mm}
+    \end{minipage} \\
+    \hline
+    \end{tabular}
+    \end{table}
