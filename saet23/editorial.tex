@@ -1,0 +1,126 @@
+\documentclass[12pt,oneside]{article} % Uma Coluna e lingua portuguesa
+%\usepackage[T1]{fontenc}        % Permite digitar os acentos de forma normal
+\usepackage[utf8]{inputenc}
+%\usepackage[english]{babel}
+\usepackage[portuges,brazil]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[dvips]{graphicx}    % Permite Gráficos
+%\usepackage{times}    % Fonte Times
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{nomencl}    % glossario
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[compact]{titlesec}
+\usepackage{wrapfig}
+\usepackage{color}
+
+%=======================================================================
+
+% Hifenização das palavras desconhecidas pelo LaTeX
+%\hyphenation{}
+\paperheight    297mm
+\paperwidth     210mm
+\voffset         -15mm
+\headheight      15pt %% tamanho de letra
+\headsep         5mm  %% para o início do texto
+\oddsidemargin  -3.0mm
+\evensidemargin -3.0mm
+\textwidth      167.0mm
+\topmargin      005.0mm
+\textheight     240.0mm
+\footskip       10.0mm
+
+\title{SAET 2023 - Maratona de Programação}
+
+\author{Maratona de Programação}
+\date{26 de Outubro de 2022}
+\usepackage{indentfirst}
+\usepackage{subfig}
+
+\parindent=0pt
+\setlength{\parskip}{7pt plus 1pt minus 2pt}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+\begin{document}
+
+\begin{center}
+\textbf{\Huge SAET 2023 - Maratona de Programação} \\
+\vspace{0.2cm}
+\textit{26 de Outubro de 2022} \\
+\vspace{1.0cm}
+%\textbf{Sevidor BOCA:} \\
+%\texttt{\large http://maratona.c3sl.ufpr.br/boca/} \\
+%\vspace{1.0cm}
+\begin{figure}[h!]
+	\centering
+ \includegraphics[scale=0.95]{capa.png}
+\end{figure}
+\vspace{1.0cm}
+%\textbf{Organizadores:}\\
+%{\small Flávio Zavan} \\
+%{\small Ricardo Oliveira} \\
+\vspace{1.0cm}
+\end{center}
+
+\clearpage
+
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{0.7pt}
+\renewcommand{\headrulewidth}{0.7pt}
+\lhead{SAET 2023 - Maratona de Programação}
+%\chead{Maratonas de Programação}
+\rhead{26 de Outubro de 2023}
+\cfoot{\thepage}
+
+\newpage
+
+\newpage
+\section*{A: Alergia} %tle=1
+\input{alergia/editorial.tex}
+
+\newpage
+\section*{B: Jogo} %tle=1
+\input{jogo/editorial.tex}
+
+\newpage
+\section*{C: Vasilha Errada} %tle=1
+\input{vasilhaerrada/editorial.tex}
+
+\newpage
+\section*{D: Drawkcabackward} %tle=1
+\input{drawkcab/editorial.tex}
+
+\newpage
+\section*{E: Empilha Copos} %tle=1
+\input{empilha/editorial.tex}
+
+\newpage
+\section*{F: Falco} %tle=1
+\input{falco/editorial.tex}
+
+\newpage
+\section*{G: Gafe} %tle=1
+\input{gafe/editorial.tex}
+
+\newpage
+\section*{H: Raid} %tle=1
+\input{raid/editorial.tex}
+
+\newpage
+\section*{I: Lista} %tle=1
+\input{lista/editorial.tex}
+
+\newpage
+\section*{J: Meuzamigo} %tle=1
+\input{meuzamigo/editorial.tex}
+
+\newpage
+\section*{K: Tiras} %tle=1
+\input{tiras/editorial.tex}
+
+\end{document}
