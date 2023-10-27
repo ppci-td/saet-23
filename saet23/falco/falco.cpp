@@ -11,6 +11,8 @@ int main() {
     cin >> t >> k;
     cin >> s;
 
+    assert(s.size() == t);
+
     for(auto c: s)
         o.push_back(((c - 'a' + k) % 26) + 'a');
 
