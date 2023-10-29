@@ -1,1 +1,30 @@
-TODO
+Deve-se criar 2 vetores, um contendo o talento dos defensores e outro contendo o talento dos atacantes, e ordena-los.
+Criar 2 variaveis auxiliares $t1$ e $t2$, as quais vão controlar diferença de atacantes e defensores no time. 
+Além de criar 2 variaveis $soma1$ e $soma2$ para guardar a soma dos talendos de cada time.
+
+Então devem ser feitas $n/2$ iterações, sendo $n$ o numero de jogadores a serem escolhidos, onde a cada
+iteração $i$ serão escolhidos 2 jogadores, um para cada time. Para fazer a intercalação da ordem
+das escolhas, é utilizado $i mod 2$, sendo que, quando $i$ é par o time 1 escolhe primeiro e quando $i$
+é impar o time 2 escolhe primeiro.
+
+Para cada escolha é feita uma sequência de condições:
+\begin{itemize}
+    \item Se o vetor de defensores está vazio, incrementar o ultimo valor do vetor
+    de atacantes a $soma1/soma2$ e remove-lo do vetor;
+    \item Se o vetor de atacantes está vazio, incrementar o ultimo valor do vetor
+    de defensores a $soma1/soma2$ e remove-lo do vetor;
+    \item Se ambos vetores não estiverem vazios e $t1/t2 < 0$, incrementar o ultimo valor do vetor
+    de atacantes a $soma1/soma2$, remove-lo do vetor e incrementar 1 a $t1/t2$;
+    \item Se ambos vetores não estiverem vazios e $t1/t2 > 0$, incrementar o ultimo valor do vetor
+    de defensores a $soma1/soma2$, remove-lo do vetor e decrementar 1 a $t1/t2$;
+    \item Se ambos vetores não estiverem vazios e $t1/t2 = 0$, comparar o ultimo valor de ambos
+    os vetores. Caso o maior valor seja um atacante, incrementar o ultimo valor do vetor
+    de atacantes a $soma1/soma2$, remove-lo do vetor e incrementar 1 a $t1/t2$. Caso o maior valor
+    seja um defensor, incrementar o ultimo valor do vetor de defensores a $soma1/soma2$, remove-lo 
+    do vetor e decrementar 1 a $t1/t2$;
+\end{itemize}
+
+Ao fim das iterações, compara $soma1$ e $soma2$ e retorna a maior soma dividido por $n/2$, numero de
+jogadores do time.
+
+Complexidade total: $O(N\lg N)$.
