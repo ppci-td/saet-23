@@ -1,6 +1,6 @@
 Sila trabalha em um pequeno ateliê de costura próprio onde é confeccionado de tudo, desde camisetas e uniformes até o vestuário infantil. Depois de uma semana cheia de entregas, a maior cooperativa da cidade, SAET (Sociedade de Agropecuária e Empreendedorismo de Tumingapurubá), pediu para que ela produzisse bodies para bebês, pois o departamento de Recursos Humanos da cooperativa queria dar um de presente para toda funcionária ou cooperada gestante que entrasse de licença maternidade. 
 
-Para confeccionar os bodies, existem $n$ caixas com tiras de comprimento $c_i$. Sila pediu para que seu marido, Amário, cortasse essas tiras em tamanhos iguais, sem deixar sobras e procurando deixar as tiras o mais compridas possível. Para fazer isso, Amário criou o seguinte processo para juntar duas caixas adjacentes:
+Para confeccionar os bodies, existem $N$ caixas com tiras de comprimento $c_i$. Sila pediu para que seu marido, Amário, cortasse essas tiras em tamanhos iguais, sem deixar sobras e procurando deixar as tiras o mais compridas possível. Para fazer isso, Amário criou o seguinte processo para juntar duas caixas adjacentes:
 
 \begin{itemize}
     \item Pegar duas caixas adjacentes $i$ e $i+1$ com tiras de comprimentos $c_i$ e $c_{i+1}$;
@@ -10,7 +10,7 @@ Para confeccionar os bodies, existem $n$ caixas com tiras de comprimento $c_i$. 
 
 Para ter uma noção de quanto Amário irá demorar, Sila mandou que você determinasse qual é o mínimo de vezes que o processo de junção terá de ser realizado para que, ao final, todas as tiras das caixas remanescentes tenham o mesmo tamanho. Note que a quantidade de tiras não importa, mas sim o tamanho delas em cada caixa.
 
-Por exemplo, se houverem $n=5$ caixas, cada uma com tiras de comprimento $c=[10,30,12,42,2]$, o processo pode ser realizado um mínimo de 3 vezes até que, ao final, todas as caixas tenham tiras de mesmo comprimento e o processo não possa mais ser realizado. Uma das formas de juntar as caixas 3 vezes, satisfazendo o pedido de Sila, é:
+Por exemplo, se houverem $N=5$ caixas, cada uma com tiras de comprimento $c=[10,30,12,42,2]$, o processo pode ser realizado um mínimo de 3 vezes até que, ao final, todas as caixas tenham tiras de mesmo comprimento e o processo não possa mais ser realizado. Uma das formas de juntar as caixas 3 vezes, satisfazendo o pedido de Sila, é:
 
 \begin{center}
     $[\textcolor{red}{10},\textcolor{red}{30},12,42,2] \rightarrow [10,\textcolor{red}{12},\textcolor{red}{42},2] \rightarrow [\textcolor{red}{10},\textcolor{red}{6},2] \rightarrow [2,2]$
@@ -20,9 +20,9 @@ Em vermelho, estão o comprimento das tiras das duas caixas escolhidas para real
 
 \subsection*{Entrada}
  
-A primeira linha da entrada contém o número de caixas $n$ ($2\leq n\leq 10^5$).
+A primeira linha da entrada contém o número de caixas $N$ ($2\leq N\leq 10^5$).
  
-A próxima linha consiste em $n$ inteiros $c_i$ ($1\leq c_i \leq 10^5$), o tamanho das tiras dentro da caixa $i$.
+A próxima linha consiste em $N$ inteiros $c_i$ ($1\leq c_i \leq 10^5$), o tamanho das tiras dentro da caixa $i$.
  
 \subsection*{Saída}
 A saída deverá conter uma linha com o número de processos de junção realizados, atendendo à ordem de Sila.
