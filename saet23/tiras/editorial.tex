@@ -1,1 +1,15 @@
-TODO
+Primeiro, é importante notar que a operação Máximo Divisor Comum é associativa\footnote{\url{pt.wikipedia.org/wiki/Associatividade}}. Matematicamente, significa que, para caixas $i$, $i+1$ e $i+2$ quaisquer, temos que: 
+
+\[\text{MDC}(\text{MDC}(c_{i}, c_{i+1}), c_{i+2}) = \text{MDC}(c_{i}, \text{MDC}(c_{i+1}, c_{i+2})) = \text{MDC}(c_{i}, c_{i+1}, c_{i+2})\]
+
+Dessa forma, uma sequência de operações ótima pode ser realizada em qualquer ordem, dada a propriedade associativa das operações.
+
+Tendo tudo isso em mente, é possível encontrar uma solução gulosa\footnote{\url{pt.wikipedia.org/wiki/Algoritmo_guloso}}. Primeiro, deve-se computar o MDC $M$ entre todas as caixas $(M = \text{MDC}(c_{1}, c_{2}, c_{3}, ..., c_{n})$, pois, ao final, todas as caixas restantes terão tiras de tamanho $M$.
+
+Em seguida, a escolha ótima se baseia no fato de que, se a caixa mais a esquerda tiver tiras de tamanho diferente de $M$, em algum momento será preciso realizar uma operação entre ela e a caixa seguinte, até que suas tiras resultem neste tamanho. Como já mencionado, a operação MDC é associativa, e por isso pode-se escolher realizar essa operação primeiro, sem prejuízo ou aumento na quantidade de operações totais realizadas.
+
+Como a caixa anterior já tem tiras de tamanho $M$, ela não precisa de mais operações. Então pode-se pular para a caixa seguinte e realizar o mesmo processo, realizando a operação entre ela e a próxima caixa até ter tiras de tamanho $M$. Caso a última caixa não tenha tiras de tamanho $M$ mesmo após todas as operações, será necessário realizar mais uma operação entre ela e a caixa anterior.
+
+O algoritmo itera sobre as caixas duas vezes para realizar operações de MDC, e portanto tem complexidade assintótica $O(N \log c)$ se a operação MDC for $O(\log c)$ utilizando o Algoritmo de Euclides\footnote{\url{pt.wikipedia.org/wiki/Algoritmo_de_Euclides}} com resto. Note que é possível chegar ao mesmo resultado na direção inversa (da última caixa até a primeira), e que outras soluções gulosas podem existir utilizando os mesmos princípios apresentados.
+
+Complexidade final: $O(N \log c)$.
