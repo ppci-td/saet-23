@@ -1,1 +1,20 @@
-TODO
+A solução pode ser encontrada utilizando programação dinâmica\footnote{Esse conceito é tão amplamente aplicável em diferentes problemas, fáceis e difíceis, que foi abordado em um TCC pensando em maratonistas: \url{pantheon.ufrj.br/bitstream/11422/14161/1/THNCoelho.pdf}}, tanto com tabulação ou memoização/\textit{caching}, pois a melhor resposta para um estado $[E, D]$ pode ser determinada a partir de seus sub-estados. 
+
+No caso do problema, a resposta de um estado depende de três sub-estados:
+
+\begin{enumerate}
+\item Apertar o botão \texttt{E-} (somar 1 ao resultado do estado $[E-1, D]$);
+\item Apertar o botão \texttt{D-} (somar 1 ao resultado do estado $[E, D-1]$);
+\item Apertar o botão \texttt{S}  (somar 1 ao resultado do estado $[E-D, D]$ ou $[E, D-E]$, dependendo de qual lado for maior. Se os dois lados tiverem mesmo nível, pode-se escolher qualquer um).
+\end{enumerate}
+
+Deixa-se uma descrição da solução para cada uma das técnicas de memoização e de tabulação:
+
+\begin{itemize}
+\item[\textbf{Memoização}] Uma função recursiva deve ser criada para solucionar o problema. Então, faz-se uma modificação: todo retorno de função é guardado na matriz de memoização, e toda vez que a função for chamada, sempre verificar na matriz se aquele estado já não foi computado anteriormente. Se já foi, retorna o valor memoizado antes de criar outras chamadas recursivas, assim podando subárvores de recursão e diminuindo a complexidade assintótica da solução. 
+\item[\textbf{Tabulação}] Cria-se uma tabela com uma matriz e preenche-se os casos base ($[0, 0], [0, 1], [0, 2], ..., [0, D]$ e $[1, 0], [2, 0], [3, 0], ... [E, 0]$). Então deve-se iterar sobre ela, calculando o estado $[i, j]$ a partir dos sub-estados já computados em iterações anteriores.
+\end{itemize}
+
+A complexidade será de $O(E \cdot D)$ com qualquer uma das técnicas de programação dinâmica, pois cada estado pode ser minimamente representado pelos volumes dos lados esquerdo e direito.
+
+Complexidade final: $O(E \cdot D)$.
