@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 
-// errado
 using namespace std;
 
 int main() {

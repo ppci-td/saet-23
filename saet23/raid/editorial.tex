@@ -1,1 +1,12 @@
-TODO
+Dado os pontos esclarecidos pelas regras da raid e pelas regras da loja podemos concluir que 
+precisamos encontrar o intervalo que a soma das magias seja a menor possível mas que seja maior 
+ou igual do que a soma do HP de todos os monstros.
+
+Primeiramente criamos um vetor que a posição $a_i$ $(0<=i<=n)$ é a soma das magias de 
+$a_0$ até $a_i$. Neste vetor podemos acessar o valor da soma de todos os intervalos $[i,j]$ 
+possíveis do vetor utilizando $a_i - a_j$.
+
+Por fim, para cada $i$ faremos busca binária calculamos o intervalo $[i,j]$ e comparamos com 
+a soma dos HP, com $(0<=i,j<=N)
+
+Complexidade: $O(N\lg N)$
