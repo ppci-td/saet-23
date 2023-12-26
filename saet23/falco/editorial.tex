@@ -1,1 +1,9 @@
-TODO
+Substitua cada letra $s_i$ na string pela letra $k$ posições após no alfabeto. Não é
+necessário iterar pelas $k$ posições; utilizando dos códigos da tabela ASCII,
+basta calcular $(s_i - '0' + k)\%26 + '0'$.
+
+Para evitar \textit{overflow}, e utilizando uma propriedade da artimética
+modular, é possível reduzir o valor de $k$ com $k=k\%26$ antes de realizar o
+cálculo.
+
+Complexidade: $O(t)$.

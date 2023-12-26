@@ -1,1 +1,12 @@
-TODO
+Dada uma base $B$, o número de copos necessários para formar um triângulo é dado
+por $\frac{B^2 + B}{2}$. Assim, é possível:
+
+\begin{itemize}
+    \item iterar $B$ a partir de 1 enquanto $\frac{B^2 + B}{2} \leq N$.
+    Complexidade: $O(\sqrt{N})$;
+    \item usar o algoritmo da busca binária para, dado um valor de $B$, calcular
+    $\frac{B^2 + B}{2}$ e comparar com $N$ para seguir a busca com valores
+    menores ou maiores. Complexidade: $O(\lg N)$;
+    \item calcular a função inversa de $\frac{B^2 + B}{2} \leq N$. Complexidade:
+    $O(1)$.
+\end{itemize}
